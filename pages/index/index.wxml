@@ -1,0 +1,51 @@
+<view class="container">
+
+  <view class="gender-selector">
+    <text>我的性别：</text>
+    <radio-group bindchange="onGenderChange" class="radio-group">
+      <label class="radio">
+        <radio value="m" checked="{{myGender === 'm'}}"/> 男
+      </label>
+      <label class="radio">
+        <radio value="f" checked="{{myGender === 'f'}}"/> 女
+      </label>
+    </radio-group>
+  </view>
+
+  <view class="chain-display">
+    <text class="chain-text">我 <block wx:for="{{chainNames}}" wx:key="*this"> → {{item}}</block></text>
+  </view>
+
+  <view class="result-card" wx:if="{{result}}">
+    <view class="result-row">
+      <text class="label">称呼：</text>
+      <text class="value term">{{result.term}}</text>
+    </view>
+    <view class="result-row">
+      <text class="label">关系：</text>
+      <text class="value">{{result.desc}}</text>
+    </view>
+    <view class="result-row">
+      <text class="label">对方称呼我：</text>
+      <text class="value">{{result.reverseTerm}}</text>
+    </view>
+  </view>
+
+  <view class="buttons-grid">
+    <button class="rel-btn" bindtap="addRelation" data-rel="father">爸爸</button>
+    <button class="rel-btn" bindtap="addRelation" data-rel="mother">妈妈</button>
+    <button class="rel-btn" bindtap="addRelation" data-rel="elderBrother">哥哥</button>
+    <button class="rel-btn" bindtap="addRelation" data-rel="youngerBrother">弟弟</button>
+    <button class="rel-btn" bindtap="addRelation" data-rel="elderSister">姐姐</button>
+    <button class="rel-btn" bindtap="addRelation" data-rel="youngerSister">妹妹</button>
+    <button class="rel-btn" bindtap="addRelation" data-rel="husband" disabled="{{myGender === 'm'}}">老公</button>
+    <button class="rel-btn" bindtap="addRelation" data-rel="wife" disabled="{{myGender === 'f'}}">老婆</button>
+    <button class="rel-btn" bindtap="addRelation" data-rel="son">儿子</button>
+    <button class="rel-btn" bindtap="addRelation" data-rel="daughter">女儿</button>
+  </view>
+
+  <view class="action-buttons">
+    <button class="action-btn undo" bindtap="undo">撤销</button>
+    <button class="action-btn reset" bindtap="reset">重置</button>
+  </view>
+</view>

@@ -1,0 +1,42 @@
+<view class="container">
+
+  <view class="gender-selector">
+    <text>我的性别：</text>
+    <radio-group bindchange="onGenderChange" class="radio-group">
+      <label class="radio">
+        <radio value="m" checked="{{myGender === 'm'}}"/> 男
+      </label>
+      <label class="radio">
+        <radio value="f" checked="{{myGender === 'f'}}"/> 女
+      </label>
+    </radio-group>
+  </view>
+
+  <view class="result-card" wx:if="{{selectedResult}}">
+    <view class="result-row">
+      <text class="label">称呼：</text>
+      <text class="value term">{{selectedResult.term}}</text>
+    </view>
+    <view class="result-row">
+      <text class="label">关系：</text>
+      <text class="value">{{selectedResult.desc}}</text>
+    </view>
+    <view class="result-row">
+      <text class="label">对方称呼我：</text>
+      <text class="value">{{selectedResult.reverseTerm}}</text>
+    </view>
+  </view>
+
+  <scroll-view scroll-y class="list-container">
+    <view class="group" wx:for="{{relativesGroups}}" wx:key="group">
+      <view class="group-title">{{item.group}}</view>
+      <view class="item-grid">
+        <view class="item-box" wx:for="{{item.items}}" wx:for-item="rel" wx:key="name"
+              bindtap="showDetail" data-chain="{{rel.chain}}">
+          {{rel.name}}
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+</view>

@@ -1,0 +1,26 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/list/list"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "亲戚称呼计算器",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#1aad19",
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "计算器"
+    }, {
+      "pagePath": "pages/list/list",
+      "text": "速查表"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
