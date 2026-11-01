@@ -11,6 +11,8 @@
 - `utils/ads.js` - 流量主广告占位配置
 - `tests/test-kinship.js` - `utils/kinship.js` 引擎的测试断言
 
+**Note:** Replace `images/tip-qr.png` with the owner's real WeChat 赞赏码 image before release.
+
 ## 如何导入微信开发者工具
 1. 打开 微信开发者工具。
 2. 点击 "导入项目"。

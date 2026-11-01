@@ -48,4 +48,8 @@
     <button class="action-btn undo" bindtap="undo">撤销</button>
     <button class="action-btn reset" bindtap="reset">重置</button>
   </view>
+
+  <navigator url="/pages/support/support" class="support-link" wx:if="{{tipEnabled}}">
+    关于/支持作者
+  </navigator>
 </view>

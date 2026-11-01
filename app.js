@@ -3,5 +3,6 @@ App({
     console.log('App Launch');
   },
   globalData: {
+    tipEnabled: true
   }
 })

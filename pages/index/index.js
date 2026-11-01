@@ -5,10 +5,13 @@ Page({
     myGender: 'm',
     chain: [],
     chainNames: [],
-    result: null
+    result: null,
+    tipEnabled: false
   },
 
   onLoad() {
+    const app = getApp();
+    this.setData({ tipEnabled: app.globalData.tipEnabled });
     this.updateResult();
   },
 

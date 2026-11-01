@@ -37,6 +37,11 @@
         </view>
       </view>
     </view>
+    <view style="display:flex; justify-content:center; margin-top:20rpx; padding-bottom:40rpx;">
+      <navigator url="/pages/support/support" class="support-link" wx:if="{{tipEnabled}}">
+        关于/支持作者
+      </navigator>
+    </view>
   </scroll-view>
 
 </view>

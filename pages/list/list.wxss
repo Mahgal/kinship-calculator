@@ -88,3 +88,9 @@
 .item-box:active {
   background: #f0f0f0;
 }
+
+.support-link {
+  font-size: 24rpx;
+  color: #999;
+  text-decoration: underline;
+}

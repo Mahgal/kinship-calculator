@@ -111,3 +111,10 @@
   background-color: #e64340;
   color: #fff;
 }
+
+.support-link {
+  margin-top: 60rpx;
+  font-size: 24rpx;
+  color: #999;
+  text-decoration: underline;
+}

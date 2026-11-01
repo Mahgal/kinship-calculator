@@ -4,12 +4,15 @@ Page({
   data: {
     myGender: 'm',
     relativesGroups: [],
-    selectedResult: null
+    selectedResult: null,
+    tipEnabled: false
   },
 
   onLoad() {
+    const app = getApp();
     this.setData({
-      relativesGroups: kinship.getCommonRelatives()
+      relativesGroups: kinship.getCommonRelatives(),
+      tipEnabled: app.globalData.tipEnabled
     });
   },
 
