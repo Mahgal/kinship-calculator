@@ -1,0 +1,8 @@
+<view class="container">
+  <view class="support-content">
+    <text class="thank-you-title">关于/支持作者</text>
+    <text class="thank-you-msg">本项目是免费开源工具，如果您觉得有用，可以自愿支持作者。这并非必须，本程序的所有功能永久免费开放。</text>
+    <image class="tip-qr" src="/images/tip-qr.png" mode="aspectFit" show-menu-by-longpress="{{true}}"></image>
+    <text class="tip-instruction">（长按识别上方赞赏码自愿打赏）</text>
+  </view>
+</view>
